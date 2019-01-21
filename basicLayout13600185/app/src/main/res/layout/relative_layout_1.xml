@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvTypeHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="type here"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTypeHere"/>
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="#F16830"/>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="CANCEL"
+      android:layout_below="@+id/editText"
+     android:layout_toLeftOf="@+id/btOk"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="5dp"
+
+      />
+
+
+</RelativeLayout>
