@@ -28,7 +28,7 @@
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:background="#1B58B6"
-        android:layout_toRightOf="@+id/redView"
+        android:layout_alignLeft="@+id/green"
         android:layout_below="@+id/green"
 
 
