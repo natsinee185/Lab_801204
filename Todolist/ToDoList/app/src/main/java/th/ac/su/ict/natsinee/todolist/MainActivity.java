@@ -2,6 +2,7 @@ package th.ac.su.ict.natsinee.todolist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,16 +39,17 @@ public class MainActivity extends AppCompatActivity {
                 // toDoItems.add("Hello");
                 // arrayAdapter.notifyDataSetChanged();
 
-                //String item = editText.getText().toString();
-               //toDoItems.add(item);
+                String message = editText.getText().toString();
+               //toDoItems.add(massage);
                 //editText.setText("");
 
                 //toDoItems.add(editText.getText().toString());
-               toDoItems.add(0,editText.getText().toString());
-                arrayAdapter.notifyDataSetChanged();
-                editText.setText("");
-
-
+                //TextUtils.isEmpty(message)==false
+               if (!TextUtils.isEmpty(message)) {
+                   toDoItems.add(0, editText.getText().toString());
+                   arrayAdapter.notifyDataSetChanged();
+                   editText.setText("");
+               }
 
              //toDoItems.remove(item);
              //arrayAdapter.notifyDataSetChanged();
