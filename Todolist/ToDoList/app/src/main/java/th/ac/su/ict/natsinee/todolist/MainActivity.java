@@ -3,7 +3,10 @@ package th.ac.su.ict.natsinee.todolist;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;//ตัวเกลางที่ชื่อม
     private Button btnAdd;
     private EditText editText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,33 +41,59 @@ public class MainActivity extends AppCompatActivity {
                 // toDoItems.add("Hello");
                 // arrayAdapter.notifyDataSetChanged();
 
-                String message = editText.getText().toString();
+//                String message = editText.getText().toString();
                //toDoItems.add(massage);
                 //editText.setText("");
 
                 //toDoItems.add(editText.getText().toString());
                 //TextUtils.isEmpty(message)==false
-               if (!TextUtils.isEmpty(message)) {
-                   toDoItems.add(0, editText.getText().toString());
-                   arrayAdapter.notifyDataSetChanged();
-                   editText.setText("");
-               }
-
+//               if (!TextUtils.isEmpty(message)) {
+//                   toDoItems.add(0, editText.getText().toString());
+//                   arrayAdapter.notifyDataSetChanged();
+//                   editText.setText("");
+//                   hideKeeyboard(v);
+//               }
              //toDoItems.remove(item);
              //arrayAdapter.notifyDataSetChanged();
 
+                addItem(editText.getText().toString());
+                hideKeeyboard(v);
             }
         });
-
-
-        //toDoItems.add("ดีจ้า");
+//        toDoItems.add("ดีจ้า");
 //        for(int i=0; i<30;i++){
-//            String item = "Hello"+1;
-//            toDoItems.add(item);
+//        String item = "Hello"+1;
+//        toDoItems.add(item);
 //        }
+        editText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
 
+                if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN){
+                    Log.d("key listener","key pressd");
+                    addItem(editText.getText().toString());
+                    hideKeeyboard(v);
+                }
+                return false;
+            }
+        });
+        }
+    private void hideKeeyboard(View vie){
+        InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(vie.getWindowToken(),0);
+    }
+    private void addItem(String item){
+        String message = editText.getText().toString();
+        //toDoItems.add(massage);
+        //editText.setText("");
 
+        //toDoItems.add(editText.getText().toString());
+        //TextUtils.isEmpty(message)==false
+        if (!TextUtils.isEmpty(message)) {
+            toDoItems.add(0, editText.getText().toString());
+            arrayAdapter.notifyDataSetChanged();
+            editText.setText("");
 
         }
-
+    }
 }
