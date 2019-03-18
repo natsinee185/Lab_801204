@@ -35,15 +35,17 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // toDoItems.add("Hello");
-                //arrayAdapter.notifyDataSetChanged();
+                // toDoItems.add("Hello");
+                // arrayAdapter.notifyDataSetChanged();
 
                 //String item = editText.getText().toString();
                //toDoItems.add(item);
+                //editText.setText("");
 
-
-                toDoItems.add(editText.getText().toString());
+                //toDoItems.add(editText.getText().toString());
+               toDoItems.add(0,editText.getText().toString());
                 arrayAdapter.notifyDataSetChanged();
+                editText.setText("");
 
 
 
