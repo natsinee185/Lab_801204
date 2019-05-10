@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".registerapp2Activity">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxx"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:textSize="21dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please choose your team"
+            android:layout_gravity="center"
+            android:textSize="21dp"
+            />
+
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="team"
+            android:layout_gravity="center"
+            android:textSize="38dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blue"
+                android:layout_weight="1.5"
+                android:layout_marginRight="10dp"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/green"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:background="#555"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        />
+
+</LinearLayout>
