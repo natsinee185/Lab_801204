@@ -23,22 +23,17 @@ public class registerapp2Activity extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra("message");
+        String name = intent.getStringExtra("name");
 
-        textName.setText(message);
+        textName.setText(name);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
+        //Intent intent = new Intent(registerapp2Activity.this,registerapp3Activity.class);
 
-                intent.putExtra("message",textName.getText().toString());
+      //  intent.putExtra("name",textName.getText().toString());
+//        intent.putExtra("email",textEmail.getText().toString());
+//        intent.putExtra("phone",textPhone.getText().toString());
 
-                setResult(RESULT_OK,intent);
-
-                finish();
-            }
-        });
+      //  startActivityForResult(intent,1000);
 
     }
 }
