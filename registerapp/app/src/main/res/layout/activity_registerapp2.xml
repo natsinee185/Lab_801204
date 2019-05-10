@@ -19,6 +19,8 @@
             android:layout_gravity="center"
 
             >
+
+
             <TextView
                 android:id="@+id/textName"
                 android:layout_width="300dp"
@@ -51,6 +53,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/green"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/green"
@@ -58,11 +61,22 @@
 
                     />
                 <ImageView
+                    android:id="@+id/blue"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/blue"
                     android:layout_marginLeft="20dp"
                 />
+                <!--<ImageButton-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="120dp"-->
+                    <!--android:src="@drawable/blue"-->
+                    <!--/>-->
+                <!--<ImageButton-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="120dp"-->
+                    <!--android:src="@drawable/green"-->
+                    <!--/>-->
 
 
             </LinearLayout>

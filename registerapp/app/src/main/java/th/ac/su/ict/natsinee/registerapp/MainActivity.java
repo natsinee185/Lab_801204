@@ -31,13 +31,18 @@ public class MainActivity extends AppCompatActivity {
         textPhone = findViewById(R.id.textPhone);
         nextButton = findViewById(R.id.nextButton);
 
-
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,registerapp2Activity.class);
-                intent.putExtra("name","hi,"+textName.getText().toString());
+
+                Intent intent = new Intent(MainActivity.this,registerapp3Activity.class);
+
+                intent.putExtra("name",textName.getText().toString());
+                intent.putExtra("email",textEmail.getText().toString());
+                intent.putExtra("phone",textPhone.getText().toString());
+
                 startActivityForResult(intent,1000);
+
 
             }
         });
